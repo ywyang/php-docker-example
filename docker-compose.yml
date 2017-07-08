@@ -1,0 +1,27 @@
+mysql:
+  image: index.alauda.cn/library/mysql:5.6
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+  volumes:
+    - /data/mysql:/var/lib/mysql
+redis:
+  image: index.alauda.cn/library/redis:3.0
+
+mongo:
+  image: index.alauda.cn/library/mongo:3.0
+
+kemai_cpp:
+  image: index.alauda.cn/kemai/kemai_cpp:latest
+  links:
+    - redis
+    - mysql
+    - mongo
+  environment:
+    - MONGO_FEED_DATABASE=location
+    - MONGO_LOG_DATABASE=logdb
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=root
+    - MYSQL_DATABASE=kemai_db
+  volumes:
+    - /data/kemai_cpp_log:/var/log/kemai
+    - /data/kemai_cpp_data:/data
