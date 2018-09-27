@@ -40,6 +40,6 @@ $lang = array(
     '_ERROR_AUTH_'           => '认证失败账号或密码错误',
     '_CACHE_TYPE_'           => '必须指定缓存类型',
     '_STORAGE_TYPE_'         => '必须指定分布式文件系统类型',
-    '_STORAGE_TYPE_INVALID_'   => '无法加载分布式文件系统类型',
+    '_STORAGE_TYPE_INVALID_'   => '无法加载分布式文件系统类 型',
     
 );
