@@ -1,6 +1,7 @@
 <?php
 /**
  * library/core 变量提示
+ *
  */
 $lang = array( 
     '_MODULE_NOT_EXIST_'     => '无法加载模块',
